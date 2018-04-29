@@ -11,9 +11,9 @@
 		<div id="left-zone">
 		</div>
 		<div id="main">
-			<p id="english">apple</p>
-			<form action="#" id="form">
-				<input type="text" name="answer_input" id="answer">
+			<p id="question"></p>
+			<form id="form">
+				<input type="text" name="answer_input" id="answer" onkeydown="checkAnswer(event.keyCode);">
 				<input type="submit" value="OK" style="cursor:pointer" class="button">
 			</form>
 		</div>
