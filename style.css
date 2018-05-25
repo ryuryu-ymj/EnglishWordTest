@@ -14,7 +14,7 @@ body
 	/* height: 50px; */
 	margin: 10px;
 	padding: 10px;
-	border-bottom: solid 10px red;
+	border-bottom: double 10px lightpink;
 }
 
 #left-zone
