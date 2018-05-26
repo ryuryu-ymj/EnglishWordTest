@@ -1,0 +1,5 @@
+sample
+オレンジ/orange
+リンゴ/apple
+ペン/pen
+鉛筆/pencil
