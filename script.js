@@ -10,7 +10,7 @@ document.getElementById("question").textContent = japanese[problemNum];
 
 document.getElementById("form").onsubmit = function()
 {
-	if (isDisplaySolution === true)
+	if (isDisplaySolution)
 	{
 		isDisplaySolution = false;
 		document.getElementById("question").style.color = "black";
@@ -19,9 +19,9 @@ document.getElementById("form").onsubmit = function()
 	}
 	else
 	{
-		var answer = document.getElementById("form").answer_input.value;
+		const answer = document.getElementById("form").answer_input.value;
 		console.log(answer);
-		if (answer === english[problemNum])
+		if (answer.toUpperCase() === english[problemNum].toUpperCase())
 		{
 			console.log("正解");
 			isCorrect[problemNum] = true;
@@ -43,14 +43,14 @@ document.getElementById("form").onsubmit = function()
 		displayScore();
 	}
 	return false;
-}
+};
 
 function displayScore()
 {
 	console.log("finish");
-	var scoreBoard = "<h3>テスト結果</h3><ol>";
-	var score = 0;
-	for (var i = 0; i < english.length; i++)
+	let scoreBoard = "<h3>テスト結果</h3><ol>";
+	let score = 0;
+	for (let i = 0; i < english.length; i++)
 	{
 		scoreBoard += "<li>" + japanese[i] + "  " + english[i];
 		if (isCorrect[i] === true)
